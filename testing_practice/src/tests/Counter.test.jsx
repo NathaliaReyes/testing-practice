@@ -8,7 +8,7 @@ import { expect } from 'vitest';
 describe('<Counter /> component', () => {
   it('renders the Counter component', () => {
     render(<Counter />);
-    const countElem = screen.getByText(/Count:/i);
+    const countElem = screen.getByText(/Counter:/i);
     const incremElem = screen.getByText(/Increment:/i);
 
     expect(countElem).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe('<Counter /> component', () => {
     const buttonElem = screen.getByText(/Increment:/i);
 
     fireEvent.click(buttonElem);
-    const countElem = screen.getByText(/Count: 1/i);
+    const countElem = screen.getByText(/Counter: 1/i);
     expect(countElem).toBeInTheDocument();
   })
 });
